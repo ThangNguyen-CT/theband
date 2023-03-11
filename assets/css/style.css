@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clear {
+    clear:both;/* giải quyết float cha kh thể bao hết con*/
+}
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-white {
+    color: white !important ;
+}
+.text-center {
+    text-align: center !important;
+}
+.row {
+margin-left: -8px;
+margin-right: -8px;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third {
+width: 33.3333%;
+}
+.col-full {
+width: 100%;
+}
+.col-tow {
+width: 50%;
+}
+#main {
+
+}
+#header {
+height: 46px;
+background-color: black;
+position: fixed;
+top: 0px;
+left: 0px;
+right: 0px;
+z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav .subnav{
+    list-style-type:none ;
+}
+#nav > li{
+   display: inline-block;
+   position: relative;
+}
+
+#nav .subnav{
+display: none;
+background-color:black;
+position: absolute;
+box-shadow: 0 0 20px rgba(231, 137, 200, 0.5);
+top: 100%;
+left: 0px;
+}
+#nav .subnav a {
+    color:white;
+    padding: 0px 24px;
+}
+#nav > li > a {
+    color:white;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+}
+#nav li:hover .subnav{
+    display: block;
+    min-width: 150px;
+}
+#nav .subnav li:hover,#nav > li:hover > a{
+color:black;
+background-color: coral; 
+width: 100%;
+}
+#header .mobile-menu-btn {
+    position: absolute;
+    top : 0;
+    right : 0;
+    display: none;
+}
+#header .mobile-menu-btn,
+#header .search-btn{
+    float:right;
+    padding: 0 21px;
+   
+}
+
+#header .search-btn:hover{
+    background-color: red; 
+    cursor: pointer;
+}
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: black;
+}
+#header .menu-icon,
+#header .searchicon {
+    font-size: 25px;
+    color: white;
+    line-height: 46px;
+}
+#slider {
+position: relative;
+margin-top: 46px;
+padding-top:50%;
+background-image: url('../img/banner.png');
+background-repeat: no-repeat;
+background-size:cover;
+background-position: auto;
+}
+
+/*background: url('/assets/img/slider/slider1.png') top center / cover no-repeat;*/
+/*animation-name: example;
+animation-duration: 10s;*/
+#slider .text-content{
+position: absolute;
+bottom: 47px;
+left: 50%;
+transform: translateX(-50%);
+color:white;
+text-align: center;
+width: 100%;
+font-family: Arial, Helvetica, sans-serif;
+}
+#slider .text-heading{
+    font-size: 24px;
+}
+
+#slider .text-description{
+font-size: 15px;
+margin-top: 15px;
+}
+#content .section-section {
+    background-color: white;
+}
+#content .content-section{
+    /*size*/
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0px 112px;
+    font-size: 15px;
+}
+#content .section-heading {
+    text-align: center;
+    font-weight: 500; /* mỏng chữ */
+    font-family: "Segoe UI",Arial,sans-serif;
+    margin: 10px;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading {
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6; /* độ trong suốt */
+}
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 1.5;
+    text-align: justify;/* canh đề hai bên*/
+}
+#content .mtp-img {
+    margin-top: 15px;
+    width: 154px;
+    height: 154px;
+    border-radius: 5px;
+}
+#content .mtp-list {
+    margin-top: 47px;
+    /* overflow: hidden; hẻ float thì thẻ cha kh bao đc hết thẻ con nên dùng clear:both hoặc overlow */
+}
+#content .mtp-name {
+    font-size: 15px;
+}
+
+.tour-section {
+    background-color: black;
+}
+.ticket-list {
+    background-color: white;
+    margin-top: 45px;
+}
+.ticket-list li{
+    list-style: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket-list .sold-out {
+    background-color: #F44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+    border-radius: 50px;
+}
+.ticket-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
+}
+/*Places*/
+.places-list{
+    margin-top: 32px;
+}
+.places-img{
+ width: 100%;
+ display: block;
+}
+.places-img:hover{
+  opacity: 0.6;
+   }
+.places-body{
+    padding: 16px;
+    background-color: white;
+    font-size: 15px;
+}
+.places-heading{
+    font-size: 15px;
+    font-weight: 600;
+}
+.places-time{   
+margin-top: 15px;
+color: #757575;
+}
+.places-desc{
+    margin-top: 15px;
+}
+.places-buy-btn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 18px;
+    text-align: center ;
+}
+.places-buy-btn:hover{
+    color: black;
+    background-color: #dddd;
+}
+.contact-content {
+    margin-top: 48px;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+    line-height: 1.6;
+}
+.contact-info {
+    font-size: 18px;
+}
+.contact-form {
+    font-size: 15px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear:both;
+
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.mt-16:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.form-submit {
+    background-color: black;
+    color: white;
+    border: 1px solid black ;
+    padding: 10px 16px;
+    float: right;
+    margin-left: 10px;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #757575;
+    width: 100%;
+    outline: none;
+}
+.map-section{
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list {
+font-size: 24px;
+}
+#footer .copyright a,
+#footer .social-list a:hover{
+    color: rgba(0,0,0,0.6);
+}
+#footer .social-list a {
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+}
+#footer .copyright a{
+    margin-top: 15px;
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+ }
+.map-section img {
+    width: 100%;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal_container{
+    width: 900px;
+    background-color: #fff;
+    position: relative;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    animation: modalFadeIn .5s ease;
+}
+.modal_container_header{
+    background-color: #009688;
+    height: 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+}
+.modal_container_header i{
+    margin-right: 16px;
+}
+.modal_container_close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    padding: 12px;
+}
+.modal_container_close:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+.modal_container_body{
+    padding: 16px;
+}
+.modal_lable{
+    font-size: 15px;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.modal_input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#modal_pay{
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 18px;
+}
+#modal_pay:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+.modal_container_footer{
+    text-align: right;
+    padding: 16px;
+}
+.modal_container_footer a{
+    color: #2196F3;
+}
+@keyframes modalFadeIn{
+    from{
+        transform: translateY(-100%);
+        opacity: 0.5;
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
